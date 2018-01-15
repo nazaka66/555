@@ -6,19 +6,19 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
 cl = LINETCR.LINE() #Luffy
-cl.login(token="EoiZQC4bDV5Qk44Tswnf.IkbzzvV519zW6rXP3j3rJW.pMeBUTz8DfH2Z/qGmyyJCHFN5wH2HKHuNKV48f2v6xI=")
+cl.login(token="")
 cl.loginResult()
 
 ki = LINETCR.LINE() #Zorro
-ki.login(token="EoaZP9nkNwxYWypnmzre.FZsrnSkZffEi3s/ou5k+3G.0APnbmafqTC3oE5+wGs1Po7k3WaXbRwd3WTwVrafRm0=")
+ki.login(token="")
 ki.loginResult()
 
 kk = LINETCR.LINE() #Sanji
-kk.login(token="EoMTREuhzUgdJWAVvWH4.es8hyE+hUxj3aGoFVGl1Da.+EZ5M1WU+2KAwI/vQN+0mSsgw1FNUkpfToaYendW8YY=")
+kk.login(token="")
 kk.loginResult()
 
 #kc = LINETCR.LINE() #Ussof
-#kc.login(token="EolEyVgbj1HvjH4EB8G4.8j6rxDG/9KAU3ZceuHSDra./3t2ChRxHbd7nG/RgaNLz2z4iqtLQIK8n2HhEo3GNvI=")
+#kc.login(token="")
 #kc.loginResult()
 
 #ks = LINETCR.LINE() #Chooper
@@ -27,7 +27,7 @@ kk.loginResult()
 #ks.loginResult()
 
 kc = ki
-#print "login success plak"
+
 print "login by ─═हई..तุএച้ට௮..ईह═─"
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -77,7 +77,7 @@ Bmid = kk.getProfile().mid #Sanji
 #Dmid = ks.getProfile().mid #Chooper
 
 Bots=[mid,Amid,Bmid]
-admin=["ub3db3cc8a5db36da5186eb52d14bfaa9","udb9d815815cf1ad6434275ce27fc2ac0","u70d4cd257fd6c54009969ca097e5899b","ufdb9e60d1bbc0270e201375508e89c5d","u47c8bcc7bbca8bc0028dfdf00f3efafd","u4f8709f6222b794c1f03e7e04ea20277","u531f68025e1b287f71b64588a8b11875","u4d23595b08e9f80735739d28392955b0","u9dd23f96c172505900d67c03a0166225","u8d503549cead54b326e68ee191fc18aa","u7ad11ac73ff71349a735bf8e2ab4664c","u10f2bc1d25ae489af164a7114c15ac8c","u108be290d62877362cf485a3f32c09f3","u5d8a47170a059754cb41a02ad21e4454","u1a6c60f565730bc9605c8967c8f568cb","u7be6ac8547fa1b23a5e6875f69a21efa","ub3d561a2c32242e74f2cd53b4d72da29","u5d9711ee93f234533ec493465bbf6fc4","u841a9551accd88ed740deef99f35a097","ua16528da89d103b1327f793f5d7e4891","u623c1945cdb470707ccdd8ce2de566d1","u902db3bc5d3639fcb444c1029e9473bf","u6341911d93b68dd732f58e4e9957a885","u9d021cd00684df730dd3d5fdf2cf2466","uf0d90325e54613d259365b303e115885","u693bdde4e0393bee2ff85e8562234b09","u59f6240b1ea99b19a9adb35d67723420","ue0708cb841680cb0e1c285c445d3e3fc","u08974398f920148a8c62de1f13d97c35","u6ea01ab07c9d68556dc260111d21ca32"]
+admin=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
 owner=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
 whitelist=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
 
