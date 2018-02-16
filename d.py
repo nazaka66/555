@@ -6,7 +6,7 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
 cl = LINETCR.LINE() #Luffy
-cl.login(token="Ep7qQ6YYPPR7RRYrYzQf.r4b3yRCyjTgcAMdZ+lMGhW.Oj3EcZDibMUYHKj6CusxAn0cdCWl0wyoM0fm99RJcc4=")
+cl.login(token="")
 cl.loginResult()
 
 
@@ -66,10 +66,10 @@ Dmid = ks.getProfile().mid #Chooper
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
 
-owner=["ub3db3cc8a5db36da5186eb52d14bfaa9","udb9d815815cf1ad6434275ce27fc2ac0"]
-whitelist=["ub3db3cc8a5db36da5186eb52d14bfaa9","ub3db3cc8a5db36da5186eb52d14bfaa9","uc3f34b21479314698c13d8cb72feb28f","u112f0761efc7b9727702039fbe02f574"]
+owner=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
+whitelist=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
 #admin=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
-admin=["ub3db3cc8a5db36da5186eb52d14bfaa9","udb9d815815cf1ad6434275ce27fc2ac0","ub3db3cc8a5db36da5186eb52d14bfaa9","u112f0761efc7b9727702039fbe02f574","uc3f34b21479314698c13d8cb72feb28f","udb9d815815cf1ad6434275ce27fc2ac0","uf0d90325e54613d259365b303e115885","u4f8709f6222b794c1f03e7e04ea20277","u531f68025e1b287f71b64588a8b11875","u9dd23f96c172505900d67c03a0166225","u4d23595b08e9f80735739d28392955b0","u08974398f920148a8c62de1f13d97c35","ua16528da89d103b1327f793f5d7e4891","u693bdde4e0393bee2ff85e8562234b09","u7ad11ac73ff71349a735bf8e2ab4664c","u623c1945cdb470707ccdd8ce2de566d1","u6341911d93b68dd732f58e4e9957a885","uefc06d1072eff49d649b64248c221937","ue0c8b2d252076dbf2bd5b04aa5ac8219","ueaf754f4926665b7014585b770e1c04e","ub3d561a2c32242e74f2cd53b4d72da29","u70d4cd257fd6c54009969ca097e5899b","u5d8a47170a059754cb41a02ad21e4454","u5d9711ee93f234533ec493465bbf6fc4","ufb07b944f4c43f321e5dd0896c392730","u9ff50c2181b01db6f261f793a89ed41f","u43ef1454649973b33fc235359b840ff6","ud31d04514d015b4b934f092dd512e51d","uf3dd02b2150a3f5406329fe2a807a589","ua28231315c70dee670e39cd792d1338b","u31d6efccbdff06d624471063c3074d32","u450b768d4238a4dc80b8898aaeafa2c2","u8d503549cead54b326e68ee191fc18aa","uc4567626d83438660047751c2308ac18","ub2629c00192563a550a0c0d49c6a5918"]
+admin=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -170,23 +170,23 @@ def bot(op):
         #------Protect Group Kick finish-----#
 
         #------Cancel Invite User start------#
-        #if op.type == 13:
-          #if wait["Protectcancl"] == True:
-            #group = cl.getGroup(op.param1)
-            #gMembMids = [contact.mid for contact in group.invitee]
-            #if op.param2 not in Bots:
-              #if op.param2 in Bots:
-                #pass
-              #else:
-                #try:
+        if op.type == 13:
+          if wait["Protectcancl"] == True:
+            group = cl.getGroup(op.param1)
+            gMembMids = [contact.mid for contact in group.invitee]
+            if op.param2 not in Bots:
+              if op.param2 in Bots:
+                pass
+              else:
+                try:
                   #ki.cancelGroupInvitation(op.param1, gMembMids)
-                  #ki.kickoutFromGroup(op.param1,[op.param2])
-                  #cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\n" + "แน๊...!!! แอบดึงคนมาอีกแระ...😒😒😒")
-                  #ki.kickoutFromGroup(op.param1,[op.param2])
-                #except:
-                  #ki.cancelGroupInvitation(op.param1, gMembMids)
-                  #ki.sendText(op.param1,ki.getContact(op.param2).displayName + "\n" + "แอบดึงใครมาล่ะท่าน ...🙅🙅🙅")
-                  #ki.kickoutFromGroup(op.param1,[op.param2])
+                  ki.kickoutFromGroup(op.param1,[op.param2])
+                  cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\n" + "แน๊...!!! แอบดึงคนมาอีกแระ...😒😒😒")
+                  ki.kickoutFromGroup(op.param1,[op.param2])
+                except:
+                  random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
+                  random.choice(KAC).sendText(op.param1,ki.getContact(op.param2).displayName + "\n" + "แอบดึงใครมาล่ะท่าน ...🙅🙅🙅")
+                  random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
         #------Cancel Invite User Finish------#
             
         if op.type == 13:
@@ -236,10 +236,10 @@ def bot(op):
                 print "autoJoin is Off"
                     
         #------Joined User Kick start------#
-      #  if op.type == 17: #awal 17 ubah 13
-      #     if wait["Protectjoin"] == True:
-      #         if op.param2 not in admin and Bots : # Awalnya admin doang
-      #             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+        if op.type == 17: #awal 17 ubah 13
+           if wait["Protectjoin"] == True:
+               if op.param2 not in admin and Bots : # Awalnya admin doang
+                   random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
         #------Joined User Kick start------#
         if op.type == 19: #Member Ke Kick
           if op.param2 in Bots:
