@@ -6,21 +6,13 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
 cl = LINETCR.LINE() #วิไลลักษณ์
-cl.login(token="Ep7qQ6YYPPR7RRYrYzQf.r4b3yRCyjTgcAMdZ+lMGhW.Oj3EcZDibMUYHKj6CusxAn0cdCWl0wyoM0fm99RJcc4=")
+cl.login(token="ใส่โทเคน")
 cl.loginResult()
 
-#cl = LINETCR.LINE() #ธมนวรรณ
-#cl.login(token="EpAZ0nwYHSHl0zsDSABf.W+nliuEtfgMme9JlCV6YJW.8Vv2twX3C4H4fSRsfBlESjRPqCTZQEsNTvVtubzkCrY=")
-#cl.loginResult()
 
-#kk = LINETCR.LINE() #ณันธิฌา
-#kk.login(token="EqoaU5UbjubeR9ai9g14.es8hyE+hUxj3aGoFVGl1Da.9R+ne4Ul7UTkSnqOEEoed4b3xQgT+3GZIjK0zvJkDZU=")
-#kk.loginResult()
 
 ks = kc = kk = ki = cl
-#cl
-#ks = ki
-#kc = kk
+
 
 print "login By DanaiBot"
 reload(sys)
@@ -75,10 +67,10 @@ Dmid = ks.getProfile().mid #Chooper
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
 
-owner=["ub3db3cc8a5db36da5186eb52d14bfaa9","udb9d815815cf1ad6434275ce27fc2ac0"]
-whitelist=["ub3db3cc8a5db36da5186eb52d14bfaa9","ub3db3cc8a5db36da5186eb52d14bfaa9","uc3f34b21479314698c13d8cb72feb28f","u112f0761efc7b9727702039fbe02f574"]
-#admin=["ub3db3cc8a5db36da5186eb52d14bfaa9"]
-admin=["ub3db3cc8a5db36da5186eb52d14bfaa9","udb9d815815cf1ad6434275ce27fc2ac0","ub3db3cc8a5db36da5186eb52d14bfaa9","u112f0761efc7b9727702039fbe02f574","uc3f34b21479314698c13d8cb72feb28f","udb9d815815cf1ad6434275ce27fc2ac0","uf0d90325e54613d259365b303e115885","u4f8709f6222b794c1f03e7e04ea20277","u531f68025e1b287f71b64588a8b11875","u9dd23f96c172505900d67c03a0166225","u4d23595b08e9f80735739d28392955b0","u08974398f920148a8c62de1f13d97c35","ua16528da89d103b1327f793f5d7e4891","u693bdde4e0393bee2ff85e8562234b09","u7ad11ac73ff71349a735bf8e2ab4664c","u623c1945cdb470707ccdd8ce2de566d1","u6341911d93b68dd732f58e4e9957a885","uefc06d1072eff49d649b64248c221937","ue0c8b2d252076dbf2bd5b04aa5ac8219","ueaf754f4926665b7014585b770e1c04e","ub3d561a2c32242e74f2cd53b4d72da29","u70d4cd257fd6c54009969ca097e5899b","u5d8a47170a059754cb41a02ad21e4454","u5d9711ee93f234533ec493465bbf6fc4","ufb07b944f4c43f321e5dd0896c392730","u9ff50c2181b01db6f261f793a89ed41f","u43ef1454649973b33fc235359b840ff6","ud31d04514d015b4b934f092dd512e51d","uf3dd02b2150a3f5406329fe2a807a589","ua28231315c70dee670e39cd792d1338b","u31d6efccbdff06d624471063c3074d32","u450b768d4238a4dc80b8898aaeafa2c2","u8d503549cead54b326e68ee191fc18aa","uc4567626d83438660047751c2308ac18","ub2629c00192563a550a0c0d49c6a5918","u06cc9096358ed795902dc2a952decfed","u91be3bda99f03e1a1844f9c52bee9960","uf1fc9b987678bcd02ba689af7cd7d3e1","u33ccbd75cae72dc6efb8ed10bea3016e","ub95ad6c24ba9238d6bd921a8a156e554","ua4829d9a978ec3833141b1d72256b7e7","u8d01f0b776cc7582494a0f9b2812d96e"]
+owner=["MID"]
+whitelist=["MID"]
+admin=["MID"]
+
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -2361,7 +2353,7 @@ def bot(op):
 			#--------------------------------------------------------------------#
             elif msg.text in ["Time","เวลา"]:
               #if msg.from_ in admin:
-                cl.sendText(msg.to,"⏰ โปรดเตรียเทียบเวลา ⏰" + "\n\n" + datetime.today().strftime('%H:%M:%S'))
+                cl.sendText(msg.to,"⏰ โปรดเตรียมเทียบเวลา ⏰" + "\n\n" + datetime.today().strftime('%H:%M:%S'))
 			#-------------------------------------------------------------------------
 	          
       #-------------Fungsi Banned Send Contact Start------------------#
